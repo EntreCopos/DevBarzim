@@ -5,7 +5,7 @@ author: Evandro Reichert
 description: E como foi trabalhar no projeto que mais me apeguei até hoje.
 ---
 
-# : Como um projeto real me tornou um desenvolvedor mais preparado
+# Como um projeto real me tornou um desenvolvedor mais preparado
 
 Já tive experiência com alguns freelas que estão em produção, mas nenhum foi como o Barzim.
 
