@@ -1,6 +1,6 @@
 ---
 title: Decisões técnicas 🛠
-publishDate: 24 Fev 2023
+publishDate: 24 Fev 2024
 author: Andre Zorek
 description: Todo projeto começa definindo onde e como você quer chegar.
 ---
