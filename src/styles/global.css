@@ -4,7 +4,7 @@
   --text-main: #fffeef;
   --text-secondary: #fffeef60;
   --primary-color: #fec435;
-  --font-family-serif: Roboto, serif;
+  --font-family-serif: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
   --font-family-sans: 'Fira Sans', sans-serif;
 }
 
