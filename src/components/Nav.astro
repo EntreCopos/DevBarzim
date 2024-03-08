@@ -1,59 +1,74 @@
 ---
-const { current = '' } = Astro.props;
-
+const { current = "" } = Astro.props
 ---
 
 <style>
-  nav {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    font-family: var(--font-family-sans);
-    font-weight: 700;
-    justify-content: flex-end;
-  }
+	nav {
+		align-items: center;
+		display: flex;
+		flex: 1;
+		font-family: var(--font-family-sans);
+		font-weight: 700;
+		justify-content: flex-end;
+	}
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    padding: 10px 5px;
-    display: block;
-    position: relative;
-    margin-left: 20px;
-    min-width: 70px;
-    text-align: center;
-  }
+	.main-cta {
+		background-color: var(--primary-color);
+		padding: 0.5rem 1rem 0.4rem;
+		border-radius: 2rem;
+		color: #131313;
+		line-height: 1.6rem;
+	}
 
-  a:not(.selected) {
-    opacity: 0.7;
-  }
+	a {
+		color: inherit;
+		text-decoration: none;
+		padding: 10px 5px;
+		display: block;
+		position: relative;
+		margin-left: 20px;
+		min-width: 70px;
+		text-align: center;
+	}
 
-  a::before {
-    content: '';
-    position: absolute;
-    transition: transform .3s ease;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--text-secondary);
-    transform: scaleX(0);
-  }
+	.main-cta:hover {
+		opacity: 0.9;
+	}
 
-  a:hover::before,
-  .selected::before {
-    transform: scaleX(1);
-  }
+	a:not(.selected):not(.main-cta) {
+		opacity: 0.7;
+	}
 
-  .selected::before {
-    background: var(--primary-color);
-  }
+	a::before {
+		content: "";
+		position: absolute;
+		transition: transform 0.3s ease;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 2px;
+		background: var(--text-secondary);
+		transform: scaleX(0);
+	}
 
+	a:hover:not(.main-cta)::before,
+	.selected::before {
+		transform: scaleX(1);
+	}
+
+	.selected::before {
+		background: var(--primary-color);
+	}
 </style>
 
 <nav>
-  <a class={current === "blog" ? "selected" : ""} href='/blog'>Blog</a>
-  <a class={current === "equipe" ? "selected" : ""} href='/equipe'>Equipe</a>
-  <a target="_blank" href='https://www.behance.net/gallery/191726305/Barzim'>Marca</a>
-  <a target="_blank" href='https://github.com/EntreCopos/BarzimV1'>GitHub</a>
+	<a target='_blank' class='main-cta' href='https://barzim.tech/'
+		>Acesse o Barzim</a
+	>
+	<a class={current === "blog" ? "selected" : ""} href='/blog'>Blog</a>
+	<a class={current === "equipe" ? "selected" : ""} href='/equipe'>Equipe</a>
+	<a target='_blank' href='https://www.behance.net/gallery/191726305/Barzim'
+		>Marca</a
+	>
+	<a target='_blank' href='https://github.com/EntreCopos/BarzimV1'>GitHub</a>
 </nav>
